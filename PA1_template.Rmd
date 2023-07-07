@@ -9,6 +9,7 @@ date: "2023-07-07"
 library(ggplot2)
 library(dplyr)
 library(lubridate)
+library(knitr)
 ```
 
 ##downloading and reading the file
@@ -101,4 +102,3 @@ meansteps <- activity_impute %>% group_by(interval,weekend) %>%   summarise(aver
 qplot(interval,average,data=meansteps,geom="line",facets=weekend~.,xlab="5-minute interval",ylab="average number of steps",main="Average steps pattern between Weekday and Weekend")
 
 ```
-
